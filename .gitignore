@@ -1,0 +1,13 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+charts/*.png
+charts/*.json
+!charts/.gitkeep
+.DS_Store
+*.egg-info/
+dist/
+build/
+.pytest_cache/
