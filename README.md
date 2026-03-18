@@ -8,11 +8,13 @@ metadata sidecars for every configured pair/timeframe combination.
 
 ```
 T1 crypto-data-pipeline  →  T2 trading-chart-generator  →  T3 trading-signal-engine  →  …
-(live OHLCV ingest)          (chart PNGs + JSON sidecars)   (Claude vision + FinBERT)
+(live OHLCV ingest)          (chart PNGs + JSON sidecars)   (technical indicators + FinBERT)
 ```
 
-T2 sits between T1's data ingest and T3's signal engine. T3 reads the PNG
-charts generated here and feeds them to Claude's vision API for signal scoring.
+T2 sits between T1's data ingest and T3's signal engine. T3 uses technical
+indicators (EMA/RSI/MACD/Bollinger Bands) fused with local FinBERT sentiment
+analysis for signal scoring — no paid API calls. A mock vision demo mode
+showcases chart-reading capability using deterministic sidecar data.
 
 ## Project Layout
 
