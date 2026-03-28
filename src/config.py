@@ -20,7 +20,8 @@ class ChartConfig:
         default_pairs: Trading pairs to chart when no explicit list is given.
         default_timeframes: Timeframes to chart when no explicit list is given.
         candle_limit: Number of most-recent candles to fetch per pair/timeframe.
-        style: mplfinance style name (e.g. 'charles', 'nightclouds', 'yahoo').
+        style: mplfinance style name. Options include 'charles' (default), 'nightclouds',
+               'yahoo', 'binance', 'blueskies', 'mike'. 'nightclouds' recommended for dark-mode exports.
         figsize: Figure dimensions in inches (width, height).
         volume: Whether to render the volume panel below the candlestick chart.
     """
