@@ -205,6 +205,7 @@ class OHLCVReader:
         if df.empty:
             return df
 
+        # SQL returns DESC to get the N most-recent rows; sort ASC here for mplfinance
         df = df.sort_values("open_time").reset_index(drop=True)
         df = df.set_index("open_time")
 
