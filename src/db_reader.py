@@ -62,7 +62,7 @@ class OHLCVReader:
         user = os.getenv("DB_USER", "postgres")
         password = os.getenv("DB_PASSWORD", "")
         url = f"postgresql+psycopg2://{user}:{password}@{host}:{port}/{dbname}"
-        return create_engine(url, pool_pre_ping=True)
+        return create_engine(url, pool_pre_ping=True)  # pre_ping: reconnects stale connections from idle chart gen jobs
 
     # ------------------------------------------------------------------
     # Public query methods
