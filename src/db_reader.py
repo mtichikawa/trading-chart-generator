@@ -72,7 +72,7 @@ class OHLCVReader:
         self,
         pair: str,
         timeframe: str,
-        limit: int = 200,
+        limit: int = 200,  # matches ChartConfig.candle_limit default
     ) -> pd.DataFrame:
         """Fetch the most-recent OHLCV candles for *pair* and *timeframe*.
 
