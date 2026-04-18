@@ -13,7 +13,7 @@ import json
 import logging
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Optional
+from typing import Any, Optional
 
 import mplfinance as mpf
 import pandas as pd
@@ -265,7 +265,7 @@ class ChartGenerator:
         )
 
         # Convert index timestamps to ISO strings, handling tz-aware/naive.
-        def _ts(ts) -> str:
+        def _ts(ts: Any) -> str:
             if hasattr(ts, "isoformat"):
                 return ts.isoformat()
             return str(ts)
