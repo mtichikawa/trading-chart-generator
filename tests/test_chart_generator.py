@@ -23,6 +23,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from chart_generator import ChartGenerator  # noqa: E402
 from config import ChartConfig  # noqa: E402
+from typing import Any
 
 
 # ---------------------------------------------------------------------------
@@ -359,7 +360,7 @@ class TestGenerateAll:
         """generate_all() must skip pairs that return empty DataFrames."""
 
         class _EmptyReader:
-            def fetch_with_events(self, pair, timeframe, limit=200):
+            def fetch_with_events(self, pair: Any, timeframe, limit=200):
                 return pd.DataFrame(
                     columns=["open", "high", "low", "close", "volume"]
                 )
