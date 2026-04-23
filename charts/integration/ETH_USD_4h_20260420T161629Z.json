@@ -1,0 +1,13 @@
+{
+  "pair": "ETH/USD",
+  "timeframe": "4h",
+  "generated_at": "2026-04-20T16:16:29.556853+00:00",
+  "candle_count": 100,
+  "date_range": {
+    "start": "2026-04-04T04:16:00+00:00",
+    "end": "2026-04-20T16:16:00+00:00"
+  },
+  "last_close": 2985.5614689,
+  "price_change_pct": -6.41,
+  "chart_path": "/Users/michaelichikawa/code/github_project/projects-hub/trading-chart-generator/charts/integration/ETH_USD_4h_20260420T161629Z.png"
+}

@@ -1,0 +1,13 @@
+{
+  "pair": "BTC/USD",
+  "timeframe": "4h",
+  "generated_at": "2026-04-20T16:16:29.343501+00:00",
+  "candle_count": 100,
+  "date_range": {
+    "start": "2026-04-04T04:16:00+00:00",
+    "end": "2026-04-20T16:16:00+00:00"
+  },
+  "last_close": 80561.20615841,
+  "price_change_pct": -7.5752,
+  "chart_path": "/Users/michaelichikawa/code/github_project/projects-hub/trading-chart-generator/charts/integration/BTC_USD_4h_20260420T161629Z.png"
+}

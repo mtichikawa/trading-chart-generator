@@ -1,0 +1,13 @@
+{
+  "pair": "SOL/USD",
+  "timeframe": "1h",
+  "generated_at": "2026-04-20T16:16:29.663591+00:00",
+  "candle_count": 100,
+  "date_range": {
+    "start": "2026-04-16T13:16:00+00:00",
+    "end": "2026-04-20T16:16:00+00:00"
+  },
+  "last_close": 162.73216395,
+  "price_change_pct": -1.1455,
+  "chart_path": "/Users/michaelichikawa/code/github_project/projects-hub/trading-chart-generator/charts/integration/SOL_USD_1h_20260420T161629Z.png"
+}
