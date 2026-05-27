@@ -8,16 +8,16 @@ No database or network access required.
 
 from __future__ import annotations
 
-import json
 from pathlib import Path
+import json
 
 import numpy as np
 import pandas as pd
 import pytest
 
 # ---------------------------------------------------------------------------
-# Path setup
 # ---------------------------------------------------------------------------
+# Path setup
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
