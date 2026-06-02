@@ -135,3 +135,5 @@ pytest tests/ -v
 ## Contact
 
 Mike Ichikawa · [projects.ichikawa@gmail.com](mailto:projects.ichikawa@gmail.com) · [mtichikawa.github.io](https://mtichikawa.github.io)
+
+> _Note: each generated chart writes a JSON sidecar alongside the PNG with OHLCV summary stats (open, high, low, close, volume, range, trend, volatility band). The sidecar is consumed by the T3 signal engine as chart-level context — see `trading-signal-engine/src/chart_context.py`._
