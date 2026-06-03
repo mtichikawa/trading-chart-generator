@@ -360,7 +360,7 @@ class TestGenerateAll:
         """generate_all() must skip pairs that return empty DataFrames."""
 
         class _EmptyReader:
-            def fetch_with_events(self, pair: Any, timeframe, limit=200):
+            def fetch_with_events(self, pair: Any, timeframe: Any, limit=200):
                 return pd.DataFrame(
                     columns=["open", "high", "low", "close", "volume"]
                 )
