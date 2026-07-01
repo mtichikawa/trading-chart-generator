@@ -7,16 +7,16 @@ No database connection or live API is required.
 
 from __future__ import annotations
 
-import json
 from pathlib import Path
+import json
 
 import numpy as np
 import pandas as pd
 import pytest
 
 # ---------------------------------------------------------------------------
-# Path setup — allow bare imports from src/
 # ---------------------------------------------------------------------------
+# Path setup — allow bare imports from src/
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
