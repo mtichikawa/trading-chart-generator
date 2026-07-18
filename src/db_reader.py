@@ -8,13 +8,13 @@ them as a pandas DataFrame ready for mplfinance.
 
 from __future__ import annotations
 
-import os
 from typing import Optional
+import os
 
-import pandas as pd
 from dotenv import load_dotenv
 from sqlalchemy import create_engine, text
 from sqlalchemy.engine import Engine
+import pandas as pd
 
 load_dotenv()
 
