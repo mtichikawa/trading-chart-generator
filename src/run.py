@@ -24,13 +24,13 @@ Usage
 
 from __future__ import annotations
 
+from pathlib import Path
 import argparse
 import logging
 import sys
-from pathlib import Path
 
-from config import ChartConfig
 from chart_generator import ChartGenerator
+from config import ChartConfig
 from db_reader import OHLCVReader
 
 logging.basicConfig(
