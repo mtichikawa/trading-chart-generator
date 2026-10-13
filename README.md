@@ -1,18 +1,18 @@
 # trading-chart-generator · T2
 
-Reads live OHLCV data from T1's PostgreSQL and generates mplfinance candlestick PNGs with JSON metadata sidecars. Output consumed by T3's signal engine. 43/43 tests pass without a database connection.
+Reads live OHLCV data from T1's PostgreSQL and generates mplfinance candlestick PNGs with JSON metadata sidecars. Output consumed by T3's signal engine. The tests run without a database connection.
 
 ---
 
 ## Trading Arc
 
-| Repo | Role | Status |
-|------|------|--------|
-| T1 · crypto-data-pipeline | Live OHLCV ingestion · market event tagging | Shipped Mar 6 |
-| **T2 · trading-chart-generator** | Candlestick PNGs + JSON sidecars · 43/43 tests | Shipped Mar 10 |
-| T3 · trading-signal-engine | Technical indicators + FinBERT sentiment · 51/51 tests | Shipped Mar 16 |
-| T4 · trading-backtester | Backtesting + parameter sweep · 72/72 tests | Shipped Mar 26 |
-| T5 · trading-dashboard | Streamlit oversight UI · 8/8 tests | Shipped Mar 31 · [Live Demo](https://mtichikawa-trading.streamlit.app) |
+| Repo | Role |
+|------|------|
+| T1 · crypto-data-pipeline | Live OHLCV ingestion · market event tagging |
+| **T2 · trading-chart-generator** | Candlestick PNGs + JSON sidecars |
+| T3 · trading-signal-engine | Technical indicators + FinBERT sentiment |
+| T4 · trading-backtester | Backtesting + parameter sweep |
+| T5 · trading-dashboard | Streamlit oversight UI · [Live Demo](https://mtichikawa-trading.streamlit.app) |
 
 ---
 
@@ -82,8 +82,8 @@ trading-chart-generator/
 │   ├── chart_generator.py # ChartGenerator: renders PNG + writes JSON sidecar
 │   └── run.py             # CLI entry point
 ├── tests/
-│   ├── test_chart_generator.py  # 25 unit tests
-│   └── test_t1_integration.py   # 18 integration tests (mock reader + chart gen)
+│   ├── test_chart_generator.py  # unit tests
+│   └── test_t1_integration.py   # integration tests (mock reader + chart gen)
 ├── examples/
 │   ├── quick_demo.py            # Standalone demo — synthetic data, no DB
 │   └── t1_integration_demo.py   # T1→T2 integration demo (mock or live mode)
@@ -127,7 +127,7 @@ python src/run.py --pairs BTC/USD ETH/USD --timeframes 1h 4h --limit 100
 
 ```bash
 pytest tests/ -v
-# 43/43 — all run without DB or network access
+# all run without DB or network access
 ```
 
 ---
@@ -135,5 +135,3 @@ pytest tests/ -v
 ## Contact
 
 Mike Ichikawa · [projects.ichikawa@gmail.com](mailto:projects.ichikawa@gmail.com) · [mtichikawa.github.io](https://mtichikawa.github.io)
-
-> _Note: each generated chart writes a JSON sidecar alongside the PNG with OHLCV summary stats (open, high, low, close, volume, range, trend, volatility band). The sidecar is consumed by the T3 signal engine as chart-level context — see `trading-signal-engine/src/chart_context.py`._
